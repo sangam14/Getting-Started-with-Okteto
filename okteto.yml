@@ -1,0 +1,18 @@
+build:
+  nginx-deployment:
+    image: docker.io/sangam14/okteto-2048-game:okteto
+    context: .
+deploy:
+- kubectl apply -f 2048.yaml
+
+
+dev:
+  nginx-deployment:
+    command: bash
+    sync:
+    - 2048/:/usr/share/nginx/html
+    interface: 0.0.0.0
+    forward:
+    - 80:80
+
+

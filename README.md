@@ -1,2 +1,2 @@
-# Okteto-2048
-2048 on Octet Cloud 
+2048 game of okteto cloud demo 
+
